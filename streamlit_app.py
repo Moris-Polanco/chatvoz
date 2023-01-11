@@ -20,7 +20,7 @@ def generate_text(prompt):
     return message.strip()
 
 def chatbot():
-    st.set_title("Chatbot")
+    st.title("Chatbot")
     previous_message = None
     while True:
         message = st.text_input("Enter your message:", value=previous_message)
