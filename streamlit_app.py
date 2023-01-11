@@ -9,7 +9,7 @@ openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 def generate_text(prompt):
     completions = openai.Completion.create(
-        engine="text-davinci-002",
+        engine="text-davinci-003",
         prompt=prompt,
         max_tokens=1024,
         n=1,
