@@ -26,7 +26,7 @@ def speak(text):
     os.system("start response.mp3")
 
 def chatbot():
-    st.set_title("Chatbot")
+    st.title("Chatbot")
     message = st.text_input("Enter your message:")
     if message:
         response = generate_text(message)
