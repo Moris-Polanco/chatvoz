@@ -1,12 +1,11 @@
-import openai_secret_manager
 import openai
 import streamlit as st
 from gtts import gTTS 
 import os
 
-# Use the openai_secret_manager to get your API key
-secrets = openai_secret_manager.get_secret("openai")
-openai.api_key = secrets["api_key"]
+# Autenticación de OpenAI (oculta la clave en una variable de entorno)
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
 
 def generate_text(prompt):
     completions = openai.Completion.create(
